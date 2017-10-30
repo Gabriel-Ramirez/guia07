@@ -25,7 +25,7 @@ public abstract class GenericManagedBean<T> implements Serializable{
             try {
                 getFacadeLocal().create(getEntity());
                 llenarLista();
-                enviarMensaje(false,"Registro creado correctamente.");
+                enviarMensaje(false,"Registro creado correctamente");
             } catch (Exception ex) {
                 System.out.println("Error: " + ex);
                 enviarMensaje(true,"Error al crear registro creado correctamente.");
@@ -56,7 +56,6 @@ public abstract class GenericManagedBean<T> implements Serializable{
     public void eliminar() {
         if (getFacadeLocal() != null) {
             try {
-                System.out.println("Llego aqui");
                 getFacadeLocal().remove(getEntity());
                 llenarLista();
                 enviarMensaje(false,"Registro eliminado correctamente");
